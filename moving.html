@@ -8,7 +8,6 @@
         <body>
             <canvas id="canv"></canvas>
             <script>
-                var math = Math.random() * 2000
                 var can = document.getElementById("canv");
                 var ctx = can.getContext("2d");
                 //Make a block move by itself
@@ -18,15 +17,11 @@
                 can.width = sWidth;
                 var x =100;
                 var y =100;
-                var xVel = math;
-                var yVel = math;
+                var xVel = 5;
+                var yVel = 5;
                 img = new Image ();
                 img.src = "dvd.png";
                 window.setInterval(move, 16);
-                window.setInterval(random, 100);
-                function random () {
-                 Math.random() * 2000;
-                }
                 function move () {
                     ctx.clearRect(0 ,0, can.width, can.height);
                    //ctx.fillstyle = "#FF0000";
